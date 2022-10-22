@@ -17,9 +17,18 @@ terraform {
       version = "~> 1.0"
     }
   }
+
+# Terraform State Storage to Azure Storage Container
+  backend "azurerm" {
+    resource_group_name   = "terraform-storage-rg"
+    storage_account_name  = "terraformstateyrrg"
+    container_name        = "tfstatefiles"
+    key                   = "terraform.tfstate"
+  }
 }
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
+
