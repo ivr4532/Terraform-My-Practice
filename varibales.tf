@@ -33,13 +33,15 @@ variable "virtual_network_name" {
   type = string 
   default = "myvnet"
 }
+
+/*
 # 6. Subnet Name
 variable "subnet_name" {
   description = "Virtual Network Subnet Name"
   type = string 
 }
 
-/*
+
 # 7. Public IP Name
 variable "publicip_name" {
   description = "Public IP Name"
