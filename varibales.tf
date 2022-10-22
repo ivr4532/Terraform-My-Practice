@@ -11,7 +11,7 @@
 variable "resource_group_name" {
     type = string
     description = "This variable defines Resource Group"
-    default = "vyreddy-rg"
+    default = "vyreddyrg"
   
 }
 
