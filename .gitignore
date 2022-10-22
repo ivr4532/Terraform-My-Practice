@@ -1,17 +1,3 @@
-# Compiled files
-*.tfstate
-*.tfstate.backup
-*.tfstate.lock.info
-
-# logs
-*.log
-
-# Directories
-.terraform/
-.vagrant/
-
-# SSH Keys
-*.pem
-
-# Backup files
-*.bak
+.terraform.lock.hcl
+.terraform/*
+terraform.tfstate*
