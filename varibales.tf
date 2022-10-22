@@ -38,6 +38,8 @@ variable "subnet_name" {
   description = "Virtual Network Subnet Name"
   type = string 
 }
+
+/*
 # 7. Public IP Name
 variable "publicip_name" {
   description = "Public IP Name"
@@ -54,5 +56,5 @@ variable "virtual_machine_name" {
   description = "Virtual Machine Name"
   type = string 
 }
-
+*/
 
