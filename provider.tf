@@ -8,7 +8,7 @@ terraform {
     }
 
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.4.3"
     }
 
@@ -18,12 +18,12 @@ terraform {
     }
   }
 
-# Terraform State Storage to Azure Storage Container
+  # Terraform State Storage to Azure Storage Container
   backend "azurerm" {
-    resource_group_name   = "terraform-storage-rg"
-    storage_account_name  = "terraformstateyrrg"
-    container_name        = "tfstatefiles"
-    key                   = "terraform.tfstate"
+    resource_group_name  = "terraform-storage-rg"
+    storage_account_name = "terraformstateyrrg"
+    container_name       = "tfstatefiles"
+    key                  = "terraform.tfstate"
   }
 }
 

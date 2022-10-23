@@ -9,29 +9,42 @@
 # 3. Azure AKS Environment Name (Dev, QA, Prod)
 
 variable "resource_group_name" {
-    type = string
-    description = "This variable defines Resource Group"
-    default = "vyreddyrg"
-  
+  type        = string
+  description = "This variable defines Resource Group"
+  default     = "vyreddyrg"
+
 }
 
 variable "location1" {
-  type = string
+  type        = string
   description = "This varibale defines resource location"
-  default = "eastus"
+  default     = "eastus"
 }
 
 variable "environment" {
-    type = string
-    description = "This variable defines Environment"
-    default = "dev"  
+  type        = string
+  description = "This variable defines Environment"
+  default     = "dev"
 }
 
 # 5. Virtual Network Name
 variable "virtual_network_name" {
   description = "Virtual Network Name"
-  type = string 
-  default = "myvnet"
+  type        = string
+  default     = "myvnet"
+}
+
+variable "virtual_network_address" {
+  description = "Virtual Network Address Space"
+  type        = list(string)
+  default     = ["10.20.0.0.0/16"]
+}
+
+
+# subnet address range specification
+variable "subnet_range" {
+  default = ["10.20.0.0/24", "10.20.1.0/24", "10.20.2.0/24"]
+  type    = list(string)
 }
 
 /*
