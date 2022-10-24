@@ -47,6 +47,10 @@ variable "subnet_range" {
   type    = list(string)
 }
 
+variable "azure_subnet_nsg" {
+  default = "NSG for Access"
+  type = string  
+}
 /*
 # 6. Subnet Name
 variable "subnet_name" {
